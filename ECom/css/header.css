@@ -1,0 +1,60 @@
+header>h1 {
+  font-size: 80px;
+  text-align: center;
+  margin-left: 30px;
+  color: #fff; /* Màu trắng nổi bật */
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.6); /* Hiệu ứng sáng và bóng đậm */
+  z-index: 10; /* Đảm bảo chữ nổi trên overlay */
+  position: relative;
+}
+
+header>a>img {
+  margin-left: 90px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* Làm tròn logo */
+  margin-top: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7), 0 0 15px rgba(255, 255, 255, 0.5); /* Hiệu ứng bóng và ánh sáng */
+  z-index: 10; /* Đảm bảo logo nổi trên overlay */
+  position: relative; /* Vị trí tương đối để hiệu ứng hoạt động */
+  animation: float 3s ease-in-out infinite; /* Hiệu ứng chuyển động nổi lên xuống */
+}
+
+.header {
+  position: relative;
+  height: 200px;
+  background-image: url('../images/thumb.png');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; /* Ẩn phần thừa ngoài khung */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Làm tối overlay hơn để chữ và logo nổi bật */
+  z-index: 5;
+}
+
+.highlighted-text-shadow {
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  color: #e1ff00; /* Giữ màu trắng rõ ràng */
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+  z-index: 10;
+}
+
+/* Hiệu ứng nổi lên xuống */
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px); /* Nổi lên 10px */
+  }
+}
